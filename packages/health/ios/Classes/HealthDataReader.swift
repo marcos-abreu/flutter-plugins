@@ -248,12 +248,6 @@ class HealthDataReader {
                             (sample.metadata?[HKMetadataKeyWasUserEntered] as? Bool == true)
                             ? HealthConstants.RecordingMethod.manual.rawValue
                             : HealthConstants.RecordingMethod.automatic.rawValue,
-                        "workout_type": HKWorkoutActivityType.toString(sample.workoutActivityType),
-                        "total_distance": sample.totalDistance != nil
-                            ? Int(sample.totalDistance!.doubleValue(for: HKUnit.meter())) : 0,
-                        "total_energy_burned": sample.totalEnergyBurned != nil
-                            ? Int(sample.totalEnergyBurned!.doubleValue(for: HKUnit.kilocalorie()))
-                            : 0,
                     ]
                 }
 
@@ -511,12 +505,6 @@ class HealthDataReader {
                             (sample.metadata?[HKMetadataKeyWasUserEntered] as? Bool == true)
                             ? HealthConstants.RecordingMethod.manual.rawValue
                             : HealthConstants.RecordingMethod.automatic.rawValue,
-                        "workout_type": HKWorkoutActivityType.toString(sample.workoutActivityType),
-                        "total_distance": sample.totalDistance != nil
-                            ? Int(sample.totalDistance!.doubleValue(for: HKUnit.meter())) : 0,
-                        "total_energy_burned": sample.totalEnergyBurned != nil
-                            ? Int(sample.totalEnergyBurned!.doubleValue(for: HKUnit.kilocalorie()))
-                            : 0,
                     ]
                 }
 

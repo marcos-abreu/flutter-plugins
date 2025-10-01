@@ -147,10 +147,10 @@ class HealthDataPoint {
 
     // Set WorkoutSummary, if available.
     WorkoutSummary? workoutSummary;
-    if (dataPoint["workout_type"] != null ||
-        dataPoint["total_distance"] != null ||
-        dataPoint["total_energy_burned"] != null ||
-        dataPoint["total_steps"] != null) {
+    if (dataPoint["workoutActivityType"] != null ||
+        dataPoint["totalDistance"] != null ||
+        dataPoint["totalEnergyBurned"] != null ||
+        dataPoint["totalSteps"] != null) {
       workoutSummary = WorkoutSummary.fromHealthDataPoint(dataPoint);
     }
 

@@ -30,10 +30,10 @@ class WorkoutSummary {
   /// Create a [WorkoutSummary] based on a health data point from native data format.
   factory WorkoutSummary.fromHealthDataPoint(dynamic dataPoint) =>
       WorkoutSummary(
-        workoutType: dataPoint['workout_type'] as String? ?? '',
-        totalDistance: dataPoint['total_distance'] as num? ?? 0,
-        totalEnergyBurned: dataPoint['total_energy_burned'] as num? ?? 0,
-        totalSteps: dataPoint['total_steps'] as num? ?? 0,
+        workoutType: dataPoint['workoutActivityType'] as String? ?? '',
+        totalDistance: dataPoint['totalDistance'] as num? ?? 0,
+        totalEnergyBurned: dataPoint['totalEnergyBurned'] as num? ?? 0,
+        totalSteps: dataPoint['totalSteps'] as num? ?? 0,
       );
 
   /// Create a [HealthDataPoint] from json.
